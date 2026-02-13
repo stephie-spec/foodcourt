@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+server/venv/
+
+# Environment variables
+.env
+
+# Databases
+*.db
+instance/
+server/instance/
+
+# Migrations (auto-generated)
+server/migrations/versions/
+
+# OS
+.DS_Store
+
