@@ -9,7 +9,6 @@ import Navbar from '@/components/navbar';
 import { createOrder } from '@/lib/apiHelper';
 import { apiHelper } from '@/lib/apiHelper';
 
-
 const API_BASE = 'http://localhost:5555';
 
 export default function OrdersPage() {
