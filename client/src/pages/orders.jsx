@@ -7,6 +7,8 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Navbar from '@/components/navbar';
 import { createOrder } from '@/lib/apiHelper';
+import { getCustomerOrders } from '@/lib/apiHelper';
+
 
 const API_BASE = 'http://localhost:5555';
 
