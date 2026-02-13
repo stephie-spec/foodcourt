@@ -6,13 +6,11 @@ import { MapPin, ChevronRight, ChevronLeft, Search, Filter, ShoppingCart, Plus, 
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Navbar from '@/components/navbar';
-import { createOrder } from '@/lib/apiHelper';
-import { apiHelper } from '@/lib/apiHelper';
+import { createOrder , getCustomerOrders} from '@/lib/apiHelper';
 
 const API_BASE = 'http://localhost:5555';
 
 export default function OrdersPage() {
-  const { getCustomerOrders } = apiHelper;
   const router = useRouter();
   const { data: session, status } = useSession();
   const [menuData, setMenuData] = useState([]);
