@@ -6,13 +6,14 @@ import Link from 'next/link';
 import { Clock, MapPin, Package, AlertCircle, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 import { useSession } from 'next-auth/react';
 import Navbar from '@/components/navbar';
-import { getCustomerOrders } from '@/lib/apiHelper';
+import { apiHelper } from '@/lib/apiHelper';
 
 export default function CustomerOrdersPage() {
   const { data: session, status } = useSession();
   const [orders, setOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
+  const { getCustomerOrders } = apiHelper;
 
   const isLoggedIn = status === 'authenticated';
   const token = session?.accessToken || null;
